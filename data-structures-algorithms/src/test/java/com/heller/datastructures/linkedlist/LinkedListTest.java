@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class SingleLinkedListTest {
+public class LinkedListTest {
     @Test
     public void add() {
         SingleLinkedList singleLinkedList = new SingleLinkedList();
@@ -43,5 +43,14 @@ public class SingleLinkedListTest {
         singleLinkedList.list();
         System.out.println("反转打印-----");
         singleLinkedList.reversePrint();
+    }
+
+    @Test
+    public void josepfu() {
+        CircleSingleLinkedList linkedList = new CircleSingleLinkedList();
+        linkedList.add(5);
+        linkedList.list();
+        System.out.println("约瑟夫问题");
+        linkedList.getOrder(1, 2, 6);
     }
 }

@@ -9,6 +9,10 @@ public class HeroNode {
     public HeroNode() {
     }
 
+    public HeroNode(int num) {
+        this.num = num;
+    }
+
     public HeroNode(int num, String name, String nickName) {
         this.num = num;
         this.name = name;
