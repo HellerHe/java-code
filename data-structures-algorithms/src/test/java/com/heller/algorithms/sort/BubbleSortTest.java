@@ -16,7 +16,14 @@ public class BubbleSortTest {
             arr[i] = new Random().nextInt(100);
         }
         BubbleSort bubbleSort = new BubbleSort();
-        bubbleSort.sort(arr);
+        //bubbleSort.sort(arr);
+
+        MergeSort mergeSort = new MergeSort();
+        //mergeSort.sort(arr, 0, arr.length-1, new int[100]);
+
+        RadixSort radixSort = new RadixSort();
+        radixSort.sort(arr);
+
         System.out.println(Arrays.toString(arr));
         System.out.println(bubbleSort.count);
     }
