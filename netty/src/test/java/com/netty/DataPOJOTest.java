@@ -1,7 +1,7 @@
 package com.netty;
 
 import com.heller.netty.DataPOJO;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class DataPOJOTest {
     @Test

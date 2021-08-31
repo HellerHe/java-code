@@ -1,6 +1,5 @@
 package com.heller.algorithms.search;
 
-import javax.swing.*;
 import java.util.Arrays;
 
 /**

@@ -1,10 +1,6 @@
 package com.heller.iterator;
 
-import org.junit.Test;
-
-import java.util.Arrays;
-
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
 
 public class UniversityTest {
     @Test

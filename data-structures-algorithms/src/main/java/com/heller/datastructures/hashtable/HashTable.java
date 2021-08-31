@@ -1,8 +1,5 @@
 package com.heller.datastructures.hashtable;
 
-import java.util.LinkedList;
-import java.util.List;
-
 /**
  * ----哈希表（散列）
  * 数组 + 链表

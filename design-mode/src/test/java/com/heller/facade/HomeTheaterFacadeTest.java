@@ -1,8 +1,6 @@
 package com.heller.facade;
 
-import org.junit.Test;
-
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
 
 public class HomeTheaterFacadeTest {
     @Test

@@ -1,11 +1,11 @@
 package com.heller.algorithms.search;
 
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 import java.util.Random;
 
-import static org.junit.Assert.*;
 
 public class SearchTest {
     @Test

@@ -1,10 +1,8 @@
 package com.heller.interpreter;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
-
-import static org.junit.Assert.*;
 
 public class CalculatorTest {
     @Test

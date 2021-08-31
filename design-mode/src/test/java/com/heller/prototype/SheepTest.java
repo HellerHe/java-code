@@ -1,6 +1,6 @@
 package com.heller.prototype;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class SheepTest {
     @Test

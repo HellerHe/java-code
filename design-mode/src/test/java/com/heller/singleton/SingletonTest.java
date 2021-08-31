@@ -1,7 +1,6 @@
 package com.heller.singleton;
 
-import com.heller.singleton.Singleton5;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class SingletonTest {
     @Test

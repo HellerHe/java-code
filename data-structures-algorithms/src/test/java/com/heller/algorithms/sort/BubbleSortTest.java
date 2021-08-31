@@ -1,11 +1,9 @@
 package com.heller.algorithms.sort;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.Random;
-
-import static org.junit.Assert.*;
 
 public class BubbleSortTest {
 

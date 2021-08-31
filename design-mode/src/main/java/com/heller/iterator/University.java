@@ -1,7 +1,6 @@
 package com.heller.iterator;
 
 import java.util.Iterator;
-import java.util.List;
 
 /**
  * ----迭代器模式

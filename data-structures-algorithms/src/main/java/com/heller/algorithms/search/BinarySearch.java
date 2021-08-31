@@ -1,7 +1,5 @@
 package com.heller.algorithms.search;
 
-import com.sun.deploy.ui.UIFactory;
-
 import java.util.ArrayList;
 import java.util.List;
 
