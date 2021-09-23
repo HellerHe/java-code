@@ -114,6 +114,119 @@ public class NumNode {
         }
     }
 
+    //添加节点生成顺序二叉树
+    public void add(NumNode node) {
+        if (node.getNum() < this.num) {
+            if (this.left == null) {
+                this.left = node;
+            } else {
+                this.left.add(node);
+            }
+        } else {
+            if (this.right == null) {
+                this.right = node;
+            } else {
+                this.right.add(node);
+            }
+        }
+    }
+
+    //顺序二叉树查找
+    public NumNode binarySortTreeSearch(int num) {
+        if (this.num == num) {
+            return this;
+        } else if (this.num > num) {
+            if (this.left == null) {
+                return null;
+            }
+            return this.left.binarySortTreeSearch(num);
+        } else {
+            if (this.right == null) {
+                return null;
+            }
+            return this.right.binarySortTreeSearch(num);
+        }
+    }
+
+    //顺序二叉树父节点查找
+    public NumNode binarySortTreeSearchParent(int num) {
+        if ((this.left != null && this.left.num == num) || (this.right != null && this.right.num == num)) {
+            return this;
+        }
+        if (this.num > num && this.left != null) {
+            return this.left.binarySortTreeSearchParent(num);
+        } else if (this.num < num && this.right != null) {
+            return this.right.binarySortTreeSearchParent(num);
+        } else {
+            return null;
+        }
+    }
+
+    public int height() {
+        return Math.max(left == null ? 0 : left.height(), right == null ? 0 : right.height()) + 1;
+    }
+
+    private void leftRotate() {
+        NumNode newNode = new NumNode(num);
+        newNode.left = left;
+        newNode.right = right.left;
+        num = right.num;
+        right = right.right;
+        left = newNode;
+    }
+
+    private void rightRotate() {
+        NumNode newNode = new NumNode(num);
+        newNode.right = right;
+        newNode.left = left.right;
+        num = left.num;
+        left = left.left;
+        right = newNode;
+    }
+    //添加节点生成顺序二叉树
+    public void addAsAVL(NumNode node) {
+        if (this.num > node.num) {
+            if (this.left == null) {
+                this.left = node;
+            } else {
+                this.left.addAsAVL(node);
+            }
+        } else {
+            if (this.right == null) {
+                this.right = node;
+            } else {
+                this.right.addAsAVL(node);
+            }
+        }
+        //左旋转
+        if (right.height() - left.height() > 1) {
+            if (right != null && right.left.height() > right.right.height()) {
+                right.rightRotate();
+                leftRotate();
+            } else {
+                leftRotate();
+            }
+            return;
+        }
+        //右旋转
+        if (right.height() - left.height() < 1) {
+            if (left != null && left.right.height() > left.left.height()) {
+                left.leftRotate();
+                rightRotate();
+            } else {
+                rightRotate();
+            }
+        }
+    }
+
+    public int getNum() {
+        return num;
+    }
+
+    public void setNum(int num) {
+        this.num = num;
+    }
+
     public NumNode getLeft() {
         return left;
     }

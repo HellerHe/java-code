@@ -16,7 +16,8 @@ public class ArrBinaryTreeTest {
 
     @Test
     public void test() {
-        int a = 01;
-        System.out.println(a);
+        int i = 1;
+        i = i++;
+        System.out.println(i);
     }
 }

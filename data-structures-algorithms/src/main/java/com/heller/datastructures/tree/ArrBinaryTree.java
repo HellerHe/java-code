@@ -2,6 +2,10 @@ package com.heller.datastructures.tree;
 
 /**
  * ----顺序存储二叉树
+ *
+ * 第 n 个元素的左子节点为 2 * n + 1
+ * 第 n 个元素的右子节点为 2 * n + 2
+ * 第 n 个元素的父节点为 (n-1) / 2
  */
 public class ArrBinaryTree {
     private int[] arr;

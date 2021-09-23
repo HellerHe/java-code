@@ -12,6 +12,7 @@
         <module>netty</module>
         <module>design-mode</module>
         <module>data-structures-algorithms</module>
+        <module>interview</module>
     </modules>
 
     <properties>
