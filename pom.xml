@@ -13,6 +13,7 @@
         <module>design-mode</module>
         <module>data-structures-algorithms</module>
         <module>interview</module>
+        <module>juc</module>
     </modules>
 
     <properties>
