@@ -1,6 +1,7 @@
 package com.heller;
 
 public class Singleton {
+    //volatitle保证同步性不保证原子性
     private static volatile Singleton instance;
     //防止new
     private Singleton(){}
