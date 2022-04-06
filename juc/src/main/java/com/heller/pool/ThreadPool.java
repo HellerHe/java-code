@@ -9,17 +9,19 @@ import java.util.concurrent.*;
  * DiscardPolicy 直接拒绝丢弃
  * DiscardOldestPolicy 丢弃最老的任务，加入新任务
  * 线程池原理：
- *
+ * coreSize > blockQueueSize > maxSize
+ * 根据cpu核数设置
  */
 public class ThreadPool {
     public static void main(String[] args) {
+        System.out.println(Runtime.getRuntime().availableProcessors());
         ExecutorService threadPool = Executors.newFixedThreadPool(3);
         ExecutorService threadPool1 = Executors.newSingleThreadExecutor();
         ExecutorService threadPool2 = Executors.newCachedThreadPool();
 
         ThreadPoolExecutor threadPool3 = new ThreadPoolExecutor(3, 5, 1L,
                 TimeUnit.SECONDS,
-                new ArrayBlockingQueue<>(3),
+                new ArrayBlockingQueue<Runnable>(3),
                 Executors.defaultThreadFactory(),
                 new ThreadPoolExecutor.DiscardOldestPolicy());
 
@@ -28,5 +30,6 @@ public class ThreadPool {
                 System.out.println(Thread.currentThread().getName() + ":执行" );
             });
         }
+        threadPool3.shutdown();
     }
 }

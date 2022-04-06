@@ -2,7 +2,7 @@ package com.heller;
 
 /**
  * 死锁
- * 检查：jsp jstack
+ * 检查：jps jstack
  */
 public class DeadLock {
     public static void main(String[] args) {

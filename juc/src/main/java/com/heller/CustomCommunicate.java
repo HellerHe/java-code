@@ -4,6 +4,9 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+/**
+ * 按顺序精准唤醒线程，保证执行顺序
+ */
 public class CustomCommunicate {
     static class Share {
         private int flag;

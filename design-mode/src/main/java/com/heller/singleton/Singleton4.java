@@ -10,7 +10,7 @@ public class Singleton4 {
     private static volatile Singleton4 instance;
     private Singleton4(){}
 
-    public static synchronized Singleton4 getInstance() {
+    public static Singleton4 getInstance() {
         if (instance == null) {
             synchronized (Singleton4.class) {   //只有一个线程进入执行
                 if (instance == null) {
