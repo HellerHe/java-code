@@ -6,6 +6,8 @@ import java.util.concurrent.ForkJoinTask;
 import java.util.concurrent.RecursiveTask;
 
 /**
+ * 分支合并
+ *
  * RecursiveAction 没有返回结果
  * RecursiveTask 有返回结果，递归
  * 通过ForkJoinPool.submit提交任务

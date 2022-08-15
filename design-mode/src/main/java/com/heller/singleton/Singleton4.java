@@ -11,7 +11,7 @@ public class Singleton4 {
     private Singleton4(){}
 
     public static Singleton4 getInstance() {
-        if (instance == null) {
+        if (instance == null) { //不用每次获取锁，提高效率
             synchronized (Singleton4.class) {   //只有一个线程进入执行
                 if (instance == null) {
                     instance = new Singleton4();

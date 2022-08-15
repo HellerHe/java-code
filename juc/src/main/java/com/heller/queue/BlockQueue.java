@@ -2,6 +2,16 @@ package com.heller.queue;
 
 import java.util.concurrent.ArrayBlockingQueue;
 
+/**
+ * ArrayBlockingQueue
+ * LinkedBlockingQueue 默认容量 Integer.MAX_VALUE
+ * SynchronousQueue 单个元素
+ * PriorityBlockingQueue 支持优先级排序的无界阻塞队列
+ *
+ * add      offer   put
+ * remove   poll    take
+ * element  peek
+ */
 public class BlockQueue {
     public static void main(String[] args) throws InterruptedException {
         ArrayBlockingQueue<Integer> queue = new ArrayBlockingQueue<Integer>(3);

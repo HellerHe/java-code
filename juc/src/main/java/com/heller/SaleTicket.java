@@ -3,6 +3,10 @@ package com.heller;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+/**
+ * 虚假唤醒
+ * if判断之后等待，再次唤醒时直接执行后续代码，造成数据混乱
+ */
 public class SaleTicket {
 
     public static void main(String[] args) {
@@ -37,7 +41,7 @@ class Ticket {
     }
 
     /*public synchronized void sale() {
-        if (num > 0) {
+        while (num > 0) {
             System.out.println(Thread.currentThread().getName() + "卖出" + num-- + "剩余" + num);
         }
     }*/
@@ -45,7 +49,7 @@ class Ticket {
     public void sale() {
         try {
             lock.lock();
-            if (num > 0) {
+            while (num > 0) {
                 System.out.println(Thread.currentThread().getName() + "卖出" + num-- + "剩余" + num);
             }
         } catch (Exception e) {
